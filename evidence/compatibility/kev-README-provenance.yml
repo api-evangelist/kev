@@ -1,0 +1,8 @@
+source_url: https://github.com/jaredpalmer/kev/blob/85ccf56a0afb952323c621055b02876e8498d60c/README.md
+raw_url: https://raw.githubusercontent.com/jaredpalmer/kev/85ccf56a0afb952323c621055b02876e8498d60c/README.md
+commit: 85ccf56a0afb952323c621055b02876e8498d60c
+fetched: '2026-10-13'
+sha256: d40b16ba90709c043b3778afc82786f847713578cd309f7c062d2ed5d44ae495
+bytes: 43914
+classification: declared-compatibility
+quote: 'Drop-in for Jev: the TypeSafe Python SDK works against a Kev server unchanged.'
