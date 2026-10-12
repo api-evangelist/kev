@@ -1,0 +1,37 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 0
+  other_domain: 1
+  platform: 1
+  roles:
+  - other
+  - website
+hosts:
+- host: github.com
+  found_by:
+  - pointer
+  - apis[]
+  types:
+  - Website
+  - GitHubRepository
+  - License
+  serves:
+  - docs
+  registrable_domain: github.com
+  role: website
+  relation: platform
+- host: huggingface.co
+  found_by:
+  - pointer
+  types:
+  - Demo
+  - Models
+  - Datasets
+  serves: []
+  registrable_domain: huggingface.co
+  role: other
+  relation: other-domain

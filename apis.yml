@@ -1,23 +1,75 @@
 aid: kev
+
 name: Kev
-description: 'Kev is a company surfaced via the API Evangelist harvest backlog (source: market-gap) and
-  added to the network as a stub for full-pipeline profiling.'
+
+description: 'Kev is an open-source (Apache-2.0) family of small decision models built on Qwen3.5/Qwen3.8 by Jared Palmer, released on GitHub and Hugging Face. Its self-hosted server exposes an HTTP API that, per the README, "matches TypeSafe''s System One" (POST /v1/systemone with noul, choice and score questions). Not a Cognition product. No OpenAPI or JSON Schema file is published in the repository.'
+
 url: https://raw.githubusercontent.com/api-evangelist/kev/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:market-gap
+
 x-tier: stub
+
 x-tier-reason: harvest
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Decision Models
+- Open Source
+- Self-Hosted
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/kev-security.txt
+- type: WellKnown
+  url: well-known/kev-well-known.yml
+- type: Hosts
+  url: hosts/kev-hosts.yml
+- type: Vendors
+  url: vendors/kev-vendors.yml
 - type: Website
   url: https://github.com/jaredpalmer/kev
+- type: GitHubRepository
+  url: https://github.com/jaredpalmer/kev
+- type: License
+  url: https://github.com/jaredpalmer/kev/blob/main/LICENSE
+- type: Demo
+  url: https://huggingface.co/spaces/jaredpalmer/kev
+- type: Models
+  url: https://huggingface.co/collections/jaredpalmer/kev-6aad9d0ea49f2589665e07cd
+- type: Datasets
+  url: https://huggingface.co/datasets/jaredpalmer/kev-suites
+
+apis:
+- aid: kev:kev-systemone-api
+  name: Kev System One API (self-hosted)
+  description: 'Self-hosted HTTP server (python -m kev.serve, default 127.0.0.1:8009). Documented paths in the README: POST /v1/systemone, GET /v1/models, POST /v1/systemone/permute, POST /v1/systemone/separate. Optional bearer auth via KEV_API_KEY. No machine-readable contract is published.'
+  humanURL: https://github.com/jaredpalmer/kev#api
+  tags:
+  - Decision Models
+  properties:
+  - type: Documentation
+    url: https://github.com/jaredpalmer/kev#api
+  - type: SourceCode
+    url: https://github.com/jaredpalmer/kev/blob/main/kev/api.py
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  pass: pipeline-enrich-local
+  engine: claude
+  contract: none-published

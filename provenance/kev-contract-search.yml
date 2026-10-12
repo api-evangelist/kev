@@ -1,0 +1,20 @@
+generated: '2026-10-13'
+method: searched
+source: https://api.github.com/repos/jaredpalmer/kev/git/trees/HEAD?recursive=1
+result: no_published_contract
+notes: >-
+  Full recursive tree (4,565 paths, not truncated) contains no openapi/swagger/JSON Schema/proto file.
+  The HTTP API is documented only in README.md (section "API") and implemented in kev/api.py.
+  Vocabulary present: noul, choice, score. Not present anywhere in README: predicate, refusal.
+compatibility_claims_verbatim:
+- source: https://raw.githubusercontent.com/jaredpalmer/kev/main/README.md
+  text: "The API matches TypeSafe's [System One](https://docs.typesafe.ai/api), so you can point their Python SDK at your local server."
+- source: https://raw.githubusercontent.com/jaredpalmer/kev/main/README.md
+  text: "Drop-in for Jev: the TypeSafe Python SDK works against a Kev server unchanged."
+- source: https://raw.githubusercontent.com/jaredpalmer/kev/main/README.md
+  text: "Small Jev-like decision models you can train and run yourself."
+documented_paths:
+- POST /v1/systemone
+- GET /v1/models
+- POST /v1/systemone/permute
+- POST /v1/systemone/separate
