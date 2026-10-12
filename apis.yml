@@ -34,10 +34,6 @@ maintainers:
   email: info@apis.io
 
 common:
-- type: SecurityTxt
-  url: well-known/kev-security.txt
-- type: WellKnown
-  url: well-known/kev-well-known.yml
 - type: Hosts
   url: hosts/kev-hosts.yml
 - type: Vendors
@@ -72,4 +68,3 @@ x-enrichment:
   status: enriched
   pass: pipeline-enrich-local
   engine: claude
-  contract: none-published
